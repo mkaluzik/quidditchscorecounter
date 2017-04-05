@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+
+    tools:context="com.example.android.quidditchmatchcounter.MainActivity">
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:src="@drawable/background"
+    android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <ImageView
+            android:layout_width="141dp"
+            android:layout_height="186dp"
+
+            android:src="@drawable/gryf" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:layout_weight="1"
+            android:text="VS"
+            android:textColor="@android:color/holo_orange_light"
+            android:textAlignment="center"
+            android:layout_gravity="center_vertical"
+            />
+        <ImageView
+            android:layout_width="141dp"
+            android:layout_height="186dp"
+
+            android:src="@drawable/slyt"/>
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginLeft="12sp"
+    android:layout_marginRight="12sp">
+
+    <TextView
+        android:id="@+id/textview1"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:background="@color/black"
+android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:text="0"
+        android:textSize="30sp"
+        android:gravity="center"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:layout_weight="1"
+
+        />
+    <TextView
+        android:id="@+id/textview1"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:background="@color/black"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:text="0"
+        android:textSize="30sp"
+        android:gravity="center"/>
+
+
+
+
+</LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="35dp"
+                    android:onClick="addThreeForTeamA"
+                    android:text="+10 Points" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="35dp"
+                    android:onClick="addTwoForTeamA"
+                    android:text="Bludger hit" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="35dp"
+                    android:onClick="addOneForTeamA"
+                    android:text="Snitch caught" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="5dp"
+                    android:onClick="addThreeForTeamB"
+                    android:text="+10 Points" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="5dp"
+                    android:onClick="addTwoForTeamB"
+                    android:text="Bludger hit" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="5dp"
+                    android:onClick="addOneForTeamB"
+                    android:text="Snitch caught" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:onClick="resetScore"
+        android:text="Reset scores" />
+</RelativeLayout>
