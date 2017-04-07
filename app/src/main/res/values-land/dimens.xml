@@ -5,23 +5,24 @@
 
     <dimen name="activity_horizontal_margin">3dp</dimen>
     <dimen name="top_linearLayout_horizontal_margin">10dp</dimen>
-    <dimen name="house_sign_height">186dp</dimen>
-    <dimen name="house_sign_width">141dp</dimen>
+    <dimen name="top_linearLayout_width">320dp</dimen>
+    <dimen name="house_sign_height">93dp</dimen>
+    <dimen name="house_sign_width">70dp</dimen>
     <dimen name="versus_text_width">0dp</dimen>
-    <dimen name="versus_text_size">40sp</dimen>
-    <dimen name="score_box_horizontal_margin">12dp</dimen>
+    <dimen name="versus_text_size">20sp</dimen>
+    <dimen name="score_box_horizontal_margin">82dp</dimen>
     <dimen name="score_box_width">160dp</dimen>
     <dimen name="score_box_height">40dp</dimen>
     <dimen name="score_box_textSize">30sp</dimen>
     <dimen name="empty_view_sizes">0dp</dimen>
     <dimen name="button_section_top_margin">20dp</dimen>
     <dimen name="button_section_width">0dp</dimen>
-    <dimen name="button_margin_bottom">8dp</dimen>
-    <dimen name="button_margin_left">5dp</dimen>
+    <dimen name="button_margin_bottom">4dp</dimen>
+    <dimen name="button_margin_left">35dp</dimen>
     <dimen name="button_margin_right">35dp</dimen>
     <dimen name="border_view_width">1dp</dimen>
     <dimen name="border_margin_top">16dp</dimen>
-    <dimen name="reset_button_margin_bottom">32dp</dimen>
+    <dimen name="reset_button_margin_bottom">6dp</dimen>
 
 
 

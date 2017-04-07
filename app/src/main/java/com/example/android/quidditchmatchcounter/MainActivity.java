@@ -17,14 +17,18 @@ public class MainActivity extends AppCompatActivity {
 
     // Is the match still in progress or finished? Use 0 for in progress and 1 for finished
     int isTheMatchActive = 0;
-
+    TextView scoreViewB;
+    TextView scoreViewA;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        scoreViewB = (TextView) findViewById(R.id.team_b_score);
+       scoreViewA = (TextView) findViewById(R.id.team_a_score);
     }
+
 
 //    each goal is + 10 points
 //    snitch is for + 150 points
@@ -32,6 +36,13 @@ public class MainActivity extends AppCompatActivity {
     /**
     * Decide who is the winner of this match
     */
+
+    public void showToast(String msg) {
+        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+
+    }
+
+
     public void whoIsTheWinner(){
 
         String winner ="";
@@ -43,8 +54,9 @@ public class MainActivity extends AppCompatActivity {
             winner="Slytherin";
 
         }
-        Toast.makeText(getApplicationContext(), "The winner is "+ winner+"!",
-                Toast.LENGTH_SHORT).show();
+
+String winnerString = "The winner is "+winner;
+        showToast(winnerString);
     }
 
 
@@ -54,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
     public void addOneGoalForTeamA(View v) {
         if (isTheMatchActive == 0) {
             scoreTeamA = scoreTeamA + 10;
-            displayForTeamA(scoreTeamA);
+            displayforTeam(scoreTeamA,scoreViewA);
         }
     }
 
@@ -65,7 +77,8 @@ public class MainActivity extends AppCompatActivity {
     public void addOneGoalForTeamB(View v) {
         if (isTheMatchActive == 0) {
             scoreTeamB = scoreTeamB + 10;
-            displayForTeamB(scoreTeamB);
+
+            displayforTeam(scoreTeamB,scoreViewB);
         }
     }
 
@@ -77,11 +90,12 @@ public class MainActivity extends AppCompatActivity {
     public void snitchCaughtByTeamA(View v) {
         if (isTheMatchActive == 0) {
         scoreTeamA = scoreTeamA + 150;
-        displayForTeamA(scoreTeamA);
+            displayforTeam(scoreTeamA,scoreViewA);
 
 
-            Toast.makeText(getApplicationContext(), "The snitch has been catched by Griffindor's catcher! The match is over now.",
-                    Toast.LENGTH_SHORT).show();
+
+            String whoCaughtTheSnitch = "The snitch has been catched by Griffindor's catcher! The match is over now.";
+            showToast(whoCaughtTheSnitch);
             whoIsTheWinner();
         }
         isTheMatchActive = 1;
@@ -95,10 +109,11 @@ public class MainActivity extends AppCompatActivity {
     public void snitchCaughtByTeamB(View v) {
         if (isTheMatchActive == 0) {
         scoreTeamB = scoreTeamB + 150;
-        displayForTeamB(scoreTeamB);
+            displayforTeam(scoreTeamB,scoreViewB);
 
-            Toast.makeText(getApplicationContext(), "The snitch has been catched by Slytherin's catcher! The match is over now.",
-                    Toast.LENGTH_SHORT).show();
+
+            String whoCaughtTheSnitch = "The snitch has been catched by Slytherin's catcher! The match is over now.";
+            showToast(whoCaughtTheSnitch);
         whoIsTheWinner();
         }
         isTheMatchActive = 1;
@@ -108,29 +123,22 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    /**
-     * Displays the given score for Team A.
-     */
-    public void displayForTeamA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_a_score);
-        scoreView.setText(String.valueOf(score));
+
+
+    public void displayforTeam(int score,TextView scoreView){
+
+       scoreView.setText(String.valueOf(score));
     }
 
-    /**
-     * Displays the given score for Team B.
-     */
-    public void displayForTeamB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_b_score);
-        scoreView.setText(String.valueOf(score));
-    }
 
     /**
      * Bludger hits one of the players from the oposite team
      */
     public void bludgerHitGriffindor(View v){
         if (isTheMatchActive == 0) {
-            Toast.makeText(getApplicationContext(), "Ooops! One of the bludgers hits Griffindor's player. That must have hurt...",
-                    Toast.LENGTH_SHORT).show();
+
+String whoWasHit = "Ooops! One of the bludgers hits Griffindor's player. That must have hurt...";
+            showToast(whoWasHit);
         }
     }
 
@@ -139,8 +147,9 @@ public class MainActivity extends AppCompatActivity {
      */
     public void bludgerHitSlytherin(View v){
         if (isTheMatchActive == 0) {
-            Toast.makeText(getApplicationContext(), "Ooops! One of the bludgers hits Slytherin's player. That must have hurt...",
-                    Toast.LENGTH_SHORT).show();
+
+            String whoWasHit = "Ooops! One of the bludgers hits Slytherin's player. That must have hurt...";
+            showToast(whoWasHit);
         }
     }
 
@@ -151,8 +160,8 @@ public class MainActivity extends AppCompatActivity {
     public void resetScore(View v) {
         scoreTeamA = 0;
         scoreTeamB = 0;
-        displayForTeamA(scoreTeamA);
-        displayForTeamB(scoreTeamB);
+        displayforTeam(scoreTeamB,scoreViewB);
+        displayforTeam(scoreTeamA,scoreViewA);
         isTheMatchActive = 0;
     }
 
