@@ -58,7 +58,7 @@
     android:layout_marginRight="12sp">
 
     <TextView
-        android:id="@+id/textview1"
+        android:id="@+id/team_a_score"
         android:layout_width="160dp"
         android:layout_height="40dp"
         android:background="@color/black"
@@ -76,7 +76,7 @@ android:textStyle="bold"
 
         />
     <TextView
-        android:id="@+id/textview1"
+        android:id="@+id/team_b_score"
         android:layout_width="160dp"
         android:layout_height="40dp"
         android:background="@color/black"
@@ -111,7 +111,7 @@ android:textStyle="bold"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="35dp"
-                    android:onClick="addThreeForTeamA"
+                    android:onClick="addOneGoalForTeamA"
                     android:text="+10 Points" />
 
                 <Button
@@ -120,7 +120,7 @@ android:textStyle="bold"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="35dp"
-                    android:onClick="addTwoForTeamA"
+                    android:onClick="bludgerHitSlytherin"
                     android:text="Bludger hit" />
 
                 <Button
@@ -129,7 +129,7 @@ android:textStyle="bold"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="35dp"
-                    android:onClick="addOneForTeamA"
+                    android:onClick="snitchCaughtByTeamA"
                     android:text="Snitch caught" />
             </LinearLayout>
 
@@ -152,7 +152,7 @@ android:textStyle="bold"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="35dp"
                     android:layout_marginRight="5dp"
-                    android:onClick="addThreeForTeamB"
+                    android:onClick="addOneGoalForTeamB"
                     android:text="+10 Points" />
 
                 <Button
@@ -161,7 +161,7 @@ android:textStyle="bold"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="35dp"
                     android:layout_marginRight="5dp"
-                    android:onClick="addTwoForTeamB"
+                    android:onClick="bludgerHitGriffindor"
                     android:text="Bludger hit" />
 
                 <Button
@@ -170,7 +170,7 @@ android:textStyle="bold"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="35dp"
                     android:layout_marginRight="5dp"
-                    android:onClick="addOneForTeamB"
+                    android:onClick="snitchCaughtByTeamB"
                     android:text="Snitch caught" />
             </LinearLayout>
         </LinearLayout>
