@@ -2,11 +2,14 @@ package com.example.android.quidditchmatchcounter;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+
 
     // Tracks the score for Team A
     int scoreTeamA = 0;
@@ -14,7 +17,10 @@ public class MainActivity extends AppCompatActivity {
     // Tracks the score for Team B
     int scoreTeamB = 0;
 
-
+    static final String SCORE_TEAM_A = "1";
+    static final String SCORE_TEAM_B = "2";
+    static final String IS_IN_PROGRESS ="3";
+    private static final String TAG = "MainActivity";
     // Is the match still in progress or finished? Use 0 for in progress and 1 for finished
     int isTheMatchActive = 0;
     TextView scoreViewB;
@@ -29,6 +35,31 @@ public class MainActivity extends AppCompatActivity {
        scoreViewA = (TextView) findViewById(R.id.team_a_score);
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle savedInstanceState) {
+        // Save custom values into the bundle
+        savedInstanceState.putInt(SCORE_TEAM_A, scoreTeamA);
+        savedInstanceState.putInt(SCORE_TEAM_B, scoreTeamB);
+        savedInstanceState.putInt(IS_IN_PROGRESS, isTheMatchActive);
+        Log.d(TAG, "onSaveInstanceState() returned: " + SCORE_TEAM_A + SCORE_TEAM_B + IS_IN_PROGRESS);
+        // Always call the superclass so it can save the view hierarchy state
+        super.onSaveInstanceState(savedInstanceState);
+    }
+
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+
+        // Always call the superclass so it can restore the view hierarchy
+        super.onRestoreInstanceState(savedInstanceState);
+        // Restore state members from saved instance
+        scoreTeamA = savedInstanceState.getInt(SCORE_TEAM_A);
+        scoreTeamB = savedInstanceState.getInt(SCORE_TEAM_B);
+        isTheMatchActive=savedInstanceState.getInt(IS_IN_PROGRESS);
+        displayforTeam(scoreTeamB,scoreViewB);
+        displayforTeam(scoreTeamA,scoreViewA);
+        Log.d(TAG, "onRestoreInstanceState() returned: " + SCORE_TEAM_A + SCORE_TEAM_B +IS_IN_PROGRESS);
+    }
 
 //    each goal is + 10 points
 //    snitch is for + 150 points

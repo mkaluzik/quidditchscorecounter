@@ -5,7 +5,7 @@
 
     <dimen name="activity_horizontal_margin">3dp</dimen>
     <dimen name="top_linearLayout_horizontal_margin">10dp</dimen>
-    <dimen name="top_linearLayout_width">320dp</dimen>
+    <dimen name="top_linearLayout_width">420dp</dimen>
     <dimen name="house_sign_height">93dp</dimen>
     <dimen name="house_sign_width">70dp</dimen>
     <dimen name="versus_text_width">0dp</dimen>
