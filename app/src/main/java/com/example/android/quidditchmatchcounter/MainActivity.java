@@ -4,13 +4,15 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
 
-
+    Button SnitchA;
+    Button SnitchB;
     // Tracks the score for Team A
     int scoreTeamA = 0;
 
@@ -33,6 +35,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         scoreViewB = (TextView) findViewById(R.id.team_b_score);
        scoreViewA = (TextView) findViewById(R.id.team_a_score);
+        SnitchA = (Button) findViewById(R.id.snitchTeamA);
+        SnitchB = (Button) findViewById(R.id.snitchTeamB);
+        SnitchA.setOnClickListener(myhandler);
+        SnitchB.setOnClickListener(myhandler);
     }
 
     @Override
@@ -63,6 +69,31 @@ public class MainActivity extends AppCompatActivity {
 
 //    each goal is + 10 points
 //    snitch is for + 150 points
+
+
+
+    View.OnClickListener myhandler = new View.OnClickListener() {
+        public void onClick(View v) {
+            String whoCaughtTheSnitch="";
+            if (isTheMatchActive == 0) {
+            switch(v.getId()) {
+                case R.id.snitchTeamA:
+                    scoreTeamA = scoreTeamA + 150;
+                    displayforTeam(scoreTeamA, scoreViewA);
+                    whoCaughtTheSnitch = "The snitch has been catched by Griffindor's catcher! The match is over now.";
+                    break;
+                case R.id.snitchTeamB:
+                    scoreTeamB = scoreTeamB + 150;
+                    displayforTeam(scoreTeamB, scoreViewB);
+                    whoCaughtTheSnitch = "The snitch has been catched by Slytherin's catcher! The match is over now.";
+                    break;
+            }
+            showToast(whoCaughtTheSnitch);
+            whoIsTheWinner();
+                isTheMatchActive = 1;}
+        }
+    };
+
 
     /**
     * Decide who is the winner of this match
@@ -112,46 +143,6 @@ String winnerString = "The winner is "+winner;
             displayforTeam(scoreTeamB,scoreViewB);
         }
     }
-
-
-
-    /**
-     * Increase the score for Team A by 150 points and end the match. Then decide which team wins the match.
-     */
-    public void snitchCaughtByTeamA(View v) {
-        if (isTheMatchActive == 0) {
-        scoreTeamA = scoreTeamA + 150;
-            displayforTeam(scoreTeamA,scoreViewA);
-
-
-
-            String whoCaughtTheSnitch = "The snitch has been catched by Griffindor's catcher! The match is over now.";
-            showToast(whoCaughtTheSnitch);
-            whoIsTheWinner();
-        }
-        isTheMatchActive = 1;
-
-    }
-
-
-    /**
-     * Increase the score for Team B by 150 points and end the match. Then decide which team wins the match.
-     */
-    public void snitchCaughtByTeamB(View v) {
-        if (isTheMatchActive == 0) {
-        scoreTeamB = scoreTeamB + 150;
-            displayforTeam(scoreTeamB,scoreViewB);
-
-
-            String whoCaughtTheSnitch = "The snitch has been catched by Slytherin's catcher! The match is over now.";
-            showToast(whoCaughtTheSnitch);
-        whoIsTheWinner();
-        }
-        isTheMatchActive = 1;
-
-
-    }
-
 
 
 

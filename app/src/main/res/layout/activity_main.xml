@@ -127,12 +127,13 @@ android:textStyle="bold"
                     android:text="@string/bludgerHit" />
 
                 <Button
+                    android:id="@+id/snitchTeamA"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/button_margin_bottom"
                     android:layout_marginLeft="@dimen/button_margin"
                     android:layout_marginRight="@dimen/button_margin"
-                    android:onClick="snitchCaughtByTeamA"
+
                     android:text="@string/snitchCaught" />
             </LinearLayout>
 
@@ -168,12 +169,13 @@ android:textStyle="bold"
                     android:text="@string/bludgerHit" />
 
                 <Button
+                    android:id="@+id/snitchTeamB"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/button_margin_bottom"
                     android:layout_marginLeft="@dimen/button_margin"
                     android:layout_marginRight="@dimen/button_margin"
-                    android:onClick="snitchCaughtByTeamB"
+
                     android:text="@string/snitchCaught" />
             </LinearLayout>
         </LinearLayout>
