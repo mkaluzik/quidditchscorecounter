@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-
-
     tools:context="com.example.android.quidditchmatchcounter.MainActivity">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 <ImageView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -15,6 +17,7 @@
     android:scaleType="centerCrop"/>
 
     <LinearLayout
+        android:id="@+id/main_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -109,8 +112,8 @@ android:textStyle="bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/button_margin_bottom"
-                    android:layout_marginLeft="@dimen/button_margin_left"
-                    android:layout_marginRight="@dimen/button_margin_right"
+                    android:layout_marginLeft="@dimen/button_margin"
+                    android:layout_marginRight="@dimen/button_margin"
                     android:onClick="addOneGoalForTeamA"
                     android:text="@string/addTenPoints" />
 
@@ -118,8 +121,8 @@ android:textStyle="bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/button_margin_bottom"
-                    android:layout_marginLeft="@dimen/button_margin_left"
-                    android:layout_marginRight="@dimen/button_margin_right"
+                    android:layout_marginLeft="@dimen/button_margin"
+                    android:layout_marginRight="@dimen/button_margin"
                     android:onClick="bludgerHitSlytherin"
                     android:text="@string/bludgerHit" />
 
@@ -127,8 +130,8 @@ android:textStyle="bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/button_margin_bottom"
-                    android:layout_marginLeft="@dimen/button_margin_left"
-                    android:layout_marginRight="@dimen/button_margin_right"
+                    android:layout_marginLeft="@dimen/button_margin"
+                    android:layout_marginRight="@dimen/button_margin"
                     android:onClick="snitchCaughtByTeamA"
                     android:text="@string/snitchCaught" />
             </LinearLayout>
@@ -150,8 +153,8 @@ android:textStyle="bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/button_margin_bottom"
-                    android:layout_marginLeft="@dimen/button_margin_left"
-                    android:layout_marginRight="@dimen/button_margin_right"
+                    android:layout_marginLeft="@dimen/button_margin"
+                    android:layout_marginRight="@dimen/button_margin"
                     android:onClick="addOneGoalForTeamB"
                     android:text="@string/addTenPoints" />
 
@@ -159,8 +162,8 @@ android:textStyle="bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/button_margin_bottom"
-                    android:layout_marginLeft="@dimen/button_margin_left"
-                    android:layout_marginRight="@dimen/button_margin_right"
+                    android:layout_marginLeft="@dimen/button_margin"
+                    android:layout_marginRight="@dimen/button_margin"
                     android:onClick="bludgerHitGriffindor"
                     android:text="@string/bludgerHit" />
 
@@ -168,8 +171,8 @@ android:textStyle="bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/button_margin_bottom"
-                    android:layout_marginLeft="@dimen/button_margin_left"
-                    android:layout_marginRight="@dimen/button_margin_right"
+                    android:layout_marginLeft="@dimen/button_margin"
+                    android:layout_marginRight="@dimen/button_margin"
                     android:onClick="snitchCaughtByTeamB"
                     android:text="@string/snitchCaught" />
             </LinearLayout>
@@ -177,12 +180,16 @@ android:textStyle="bold"
 
 
     </LinearLayout>
+
+
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@id/main_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/reset_button_margin_bottom"
+        android:layout_marginTop="@dimen/reset_button_margin_top"
         android:onClick="resetScore"
         android:text="@string/reset_button_text" />
 </RelativeLayout>
+    </ScrollView>
