@@ -80,12 +80,12 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.snitchTeamA:
                     scoreTeamA = scoreTeamA + 150;
                     displayforTeam(scoreTeamA, scoreViewA);
-                    whoCaughtTheSnitch = "The snitch has been catched by Griffindor's catcher! The match is over now.";
+                    whoCaughtTheSnitch = "The snitch has been caught by Griffindor's catcher! The match is over now.";
                     break;
                 case R.id.snitchTeamB:
                     scoreTeamB = scoreTeamB + 150;
                     displayforTeam(scoreTeamB, scoreViewB);
-                    whoCaughtTheSnitch = "The snitch has been catched by Slytherin's catcher! The match is over now.";
+                    whoCaughtTheSnitch = "The snitch has been caught by Slytherin's catcher! The match is over now.";
                     break;
             }
             showToast(whoCaughtTheSnitch);
