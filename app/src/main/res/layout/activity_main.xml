@@ -1,197 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.android.quidditchmatchcounter.MainActivity">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-<ImageView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:src="@drawable/background"
-    android:scaleType="centerCrop"/>
 
-    <LinearLayout
-        android:id="@+id/main_content"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:layout_marginRight="@dimen/activity_horizontal_margin">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginLeft="@dimen/top_linearLayout_horizontal_margin"
-        android:layout_marginRight="@dimen/top_linearLayout_horizontal_margin">
+        android:orientation="vertical">
 
         <ImageView
-            android:layout_width="@dimen/house_sign_width"
-            android:layout_height="@dimen/house_sign_height"
-
-            android:src="@drawable/gryf" />
-
-        <TextView
-            android:layout_width="@dimen/versus_text_width"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/versus_text_size"
-            android:layout_weight="1"
-            android:text="@string/versus_text"
-            android:textColor="@android:color/holo_orange_light"
-            android:textAlignment="center"
-            android:layout_gravity="center_vertical"
-            />
-        <ImageView
-            android:layout_width="@dimen/house_sign_width"
-            android:layout_height="@dimen/house_sign_height"
-
-            android:src="@drawable/slyt"/>
-    </LinearLayout>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:layout_marginLeft="@dimen/score_box_horizontal_margin"
-    android:layout_marginRight="@dimen/score_box_horizontal_margin">
-
-    <TextView
-        android:id="@+id/team_a_score"
-        android:layout_width="@dimen/score_box_width"
-        android:layout_height="@dimen/score_box_height"
-        android:background="@color/black"
-android:textStyle="bold"
-        android:textColor="@android:color/white"
-        android:text="0"
-        android:textSize="@dimen/score_box_textSize"
-        android:gravity="center"/>
-
-    <View
-        android:layout_width="@dimen/empty_view_sizes"
-        android:layout_height="@dimen/empty_view_sizes"
-
-        android:layout_weight="1"
-
-        />
-    <TextView
-        android:id="@+id/team_b_score"
-        android:layout_width="@dimen/score_box_width"
-        android:layout_height="@dimen/score_box_height"
-        android:background="@color/black"
-        android:textStyle="bold"
-        android:textColor="@android:color/white"
-        android:text="0"
-        android:textSize="@dimen/score_box_textSize"
-        android:gravity="center"/>
-
-
-
-
-</LinearLayout>
-
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/background" />
 
         <LinearLayout
+            android:id="@+id/main_content"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="@dimen/button_section_top_margin">
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="@dimen/button_section_width"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:layout_marginLeft="@dimen/top_linearLayout_horizontal_margin"
+                android:layout_marginRight="@dimen/top_linearLayout_horizontal_margin"
+                android:orientation="horizontal">
 
+                <ImageView
+                    android:layout_width="@dimen/house_sign_width"
+                    android:layout_height="@dimen/house_sign_height"
+                    android:src="@drawable/gryf" />
 
-                <Button
-                    android:layout_width="match_parent"
+                <TextView
+                    android:layout_width="@dimen/versus_text_width"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/button_margin_bottom"
-                    android:layout_marginLeft="@dimen/button_margin"
-                    android:layout_marginRight="@dimen/button_margin"
-                    android:onClick="addOneGoalForTeamA"
-                    android:text="@string/addTenPoints" />
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="@string/versus_text"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/holo_orange_light"
+                    android:textSize="@dimen/versus_text_size" />
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/button_margin_bottom"
-                    android:layout_marginLeft="@dimen/button_margin"
-                    android:layout_marginRight="@dimen/button_margin"
-                    android:onClick="bludgerHitSlytherin"
-                    android:text="@string/bludgerHit" />
+                <ImageView
+                    android:layout_width="@dimen/house_sign_width"
+                    android:layout_height="@dimen/house_sign_height"
+                    android:src="@drawable/slyt" />
 
-                <Button
-                    android:id="@+id/snitchTeamA"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/button_margin_bottom"
-                    android:layout_marginLeft="@dimen/button_margin"
-                    android:layout_marginRight="@dimen/button_margin"
-
-                    android:text="@string/snitchCaught" />
             </LinearLayout>
-
-            <View
-                android:layout_width="@dimen/border_view_width"
-                android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/border_margin_top"
-                android:background="@android:color/darker_gray" />
 
             <LinearLayout
-                android:layout_width="@dimen/button_section_width"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/score_box_horizontal_margin"
+                android:layout_marginRight="@dimen/score_box_horizontal_margin"
+                android:orientation="horizontal">
 
+                <TextView
+                    android:id="@+id/team_a_score"
+                    android:layout_width="@dimen/score_box_width"
+                    android:layout_height="@dimen/score_box_height"
+                    android:background="@color/black"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/score_box_textSize"
+                    android:textStyle="bold" />
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/button_margin_bottom"
-                    android:layout_marginLeft="@dimen/button_margin"
-                    android:layout_marginRight="@dimen/button_margin"
-                    android:onClick="addOneGoalForTeamB"
-                    android:text="@string/addTenPoints" />
+                <View
+                    android:layout_width="@dimen/empty_view_sizes"
+                    android:layout_height="@dimen/empty_view_sizes"
+                    android:layout_weight="1" />
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/button_margin_bottom"
-                    android:layout_marginLeft="@dimen/button_margin"
-                    android:layout_marginRight="@dimen/button_margin"
-                    android:onClick="bludgerHitGriffindor"
-                    android:text="@string/bludgerHit" />
+                <TextView
+                    android:id="@+id/team_b_score"
+                    android:layout_width="@dimen/score_box_width"
+                    android:layout_height="@dimen/score_box_height"
+                    android:background="@color/black"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/score_box_textSize"
+                    android:textStyle="bold" />
 
-                <Button
-                    android:id="@+id/snitchTeamB"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/button_margin_bottom"
-                    android:layout_marginLeft="@dimen/button_margin"
-                    android:layout_marginRight="@dimen/button_margin"
-
-                    android:text="@string/snitchCaught" />
             </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/button_section_top_margin"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="@dimen/button_section_width"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/button_margin_bottom"
+                        android:layout_marginLeft="@dimen/button_margin"
+                        android:layout_marginRight="@dimen/button_margin"
+                        android:onClick="addOneGoalForTeamA"
+                        android:text="@string/addTenPoints" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/button_margin_bottom"
+                        android:layout_marginLeft="@dimen/button_margin"
+                        android:layout_marginRight="@dimen/button_margin"
+                        android:onClick="bludgerHitSlytherin"
+                        android:text="@string/bludgerHit" />
+
+                    <Button
+                        android:id="@+id/snitchTeamA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/button_margin_bottom"
+                        android:layout_marginLeft="@dimen/button_margin"
+                        android:layout_marginRight="@dimen/button_margin"
+                        android:text="@string/snitchCaught" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/border_view_width"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/border_margin_top"
+                    android:background="@android:color/darker_gray" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/button_section_width"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/button_margin_bottom"
+                        android:layout_marginLeft="@dimen/button_margin"
+                        android:layout_marginRight="@dimen/button_margin"
+                        android:onClick="addOneGoalForTeamB"
+                        android:text="@string/addTenPoints" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/button_margin_bottom"
+                        android:layout_marginLeft="@dimen/button_margin"
+                        android:layout_marginRight="@dimen/button_margin"
+                        android:onClick="bludgerHitGriffindor"
+                        android:text="@string/bludgerHit" />
+
+                    <Button
+                        android:id="@+id/snitchTeamB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/button_margin_bottom"
+                        android:layout_marginLeft="@dimen/button_margin"
+                        android:layout_marginRight="@dimen/button_margin"
+                        android:text="@string/snitchCaught" />
+
+                </LinearLayout>
+            </LinearLayout>
+
         </LinearLayout>
 
-
-    </LinearLayout>
-
-
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/main_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/reset_button_margin_top"
-        android:onClick="resetScore"
-        android:text="@string/reset_button_text" />
-</RelativeLayout>
-    </ScrollView>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/reset_button_margin_top"
+            android:onClick="resetScore"
+            android:text="@string/reset_button_text" />
+    </RelativeLayout>
+</ScrollView>

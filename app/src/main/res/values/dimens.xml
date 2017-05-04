@@ -2,7 +2,6 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
 
     <dimen name="activity_vertical_margin">16dp</dimen>
-
     <dimen name="activity_horizontal_margin">3dp</dimen>
     <dimen name="top_linearLayout_horizontal_margin">10dp</dimen>
     <dimen name="house_sign_height">186dp</dimen>
@@ -21,7 +20,4 @@
     <dimen name="border_view_width">1dp</dimen>
     <dimen name="border_margin_top">16dp</dimen>
     <dimen name="reset_button_margin_top">90dp</dimen>
-
-
-
 </resources>
